@@ -12,7 +12,7 @@ import './App.css';
 
 //data will be the string we send from our server
 const apiCall = () => {
-  axios.get('https://d177-188-43-136-34.ngrok-free.app/video',
+  axios.get('https://5969-188-43-136-34.ngrok-free.app/video',
   {
     headers: {
       "ngrok-skip-browser-warning": "true",
