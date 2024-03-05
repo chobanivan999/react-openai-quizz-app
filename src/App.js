@@ -13,10 +13,11 @@ import './App.css';
 //data will be the string we send from our server
 const apiCall = () => {
   axios.get('https://d177-188-43-136-34.ngrok-free.app/video',
-  {headers: new Headers({
-    "ngrok-skip-browser-warning": "69420",
-  })}
-  ).then((data) => {
+  {
+    headers: {
+      "ngrok-skip-browser-warning": "true",
+    }
+  }).then((data) => {
     //this console.log will be in our frontend console
     console.log(data)
   })
