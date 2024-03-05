@@ -16,6 +16,7 @@ const apiCall = () => {
   {
     headers: {
       "ngrok-skip-browser-warning": "true",
+      "Access-Control-Allow-Origin": "*"
     }
   }).then((data) => {
     //this console.log will be in our frontend console
