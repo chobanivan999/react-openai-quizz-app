@@ -12,7 +12,7 @@ import './App.css';
 
 //data will be the string we send from our server
 const apiCall = () => {
-  axios.get('https://express-openai-quizz-server.vercel.app:8080/video').then((data) => {
+  axios.get('https://d177-188-43-136-34.ngrok-free.app/video').then((data) => {
     //this console.log will be in our frontend console
     console.log(data)
   })
