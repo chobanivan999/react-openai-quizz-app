@@ -24,6 +24,8 @@ const VisuallyHiddenInput = styled('input')({
   width: 1,
 });
 
+const serverUrl = "https://5.183.9.32:8080";
+
 function App() {
   const [tabname, setTabname] = useState("");
   const [link, setLink] = useState("");
@@ -46,7 +48,7 @@ function App() {
 
   //data will be the string we send from our server
   const apiCall = () => {
-    axios.post('https://cc4e-188-43-136-34.ngrok-free.app/video',
+    axios.post(`${serverUrl}/video`,
     {
       "videolink": link
     },
@@ -301,7 +303,7 @@ function App() {
     formData.append("quizfile", file);
     axios({
       method: "post",
-      url: "https://cc4e-188-43-136-34.ngrok-free.app/parsefile",
+      url: `${serverUrl}/parsefile`,
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
