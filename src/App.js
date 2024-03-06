@@ -24,7 +24,8 @@ const VisuallyHiddenInput = styled('input')({
   width: 1,
 });
 
-const serverUrl = "https://5.183.9.32:8080";
+const serverUrl = "http://5.183.9.32:8080";
+// const serverUrl = "http://localhost:8080";
 
 function App() {
   const [tabname, setTabname] = useState("");
@@ -54,7 +55,6 @@ function App() {
     },
     {
       headers: {
-        "ngrok-skip-browser-warning": "true",
         "Access-Control-Allow-Origin": "*"
       }
     }).then((data) => {
