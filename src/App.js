@@ -46,7 +46,7 @@ function App() {
 
   //data will be the string we send from our server
   const apiCall = () => {
-    axios.post('https://5176-188-43-136-34.ngrok-free.app/video',
+    axios.post('https://cc4e-188-43-136-34.ngrok-free.app/video',
     {
       "videolink": link
     },
@@ -56,8 +56,8 @@ function App() {
         "Access-Control-Allow-Origin": "*"
       }
     }).then((data) => {
+      console.log(data);
       var quizes = data['data']['quiz_list'];
-      console.log(quizes);
       setQuiz(quizes);
       var temparr = [];
       var temparr1 = [];
@@ -301,7 +301,7 @@ function App() {
     formData.append("quizfile", file);
     axios({
       method: "post",
-      url: "https://5176-188-43-136-34.ngrok-free.app/parsefile",
+      url: "https://cc4e-188-43-136-34.ngrok-free.app/parsefile",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
