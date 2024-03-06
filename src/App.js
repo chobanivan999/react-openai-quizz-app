@@ -59,7 +59,7 @@ function App() {
       }
     }).then((data) => {
       console.log(data);
-      var quizes = data['data']['quiz_list'];
+      var quizes = data['data']['quizList'];
       setQuiz(quizes);
       var temparr = [];
       var temparr1 = [];
